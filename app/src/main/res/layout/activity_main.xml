@@ -15,5 +15,14 @@
         android:textStyle="bold"
         android:textColor="#000"
         />
+    <TextView
+        android:id="@+id/di_tx2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hello event"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/di_tx"
+        android:textColor="#000"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

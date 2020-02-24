@@ -4,19 +4,19 @@ import android.app.Activity
 import android.content.Context
 import android.view.View
 import android.widget.Toast
+import com.omega.ioc.di.annotation.BIndEventByJava
 import com.omega.ioc.di.annotation.BindLayout
 import com.omega.ioc.di.annotation.BindView
+import com.omega.ioc.di.proxy.ActivityInjectByJava
 
 object  ActivityInject {
     fun inject(context:Activity){
       //实现布局文件的注入
         injectLayout(context)
         injectView(context)
-        
-
+        //用Java处理  kotlin的注解不怎么好用
+        ActivityInjectByJava.injectEvent(context)
     }
-
-
 
     /**
      * @param context 用来反射获取setContentView方法
